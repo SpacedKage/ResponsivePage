@@ -1,0 +1,129 @@
+body {
+    padding: 0.5em;
+}
+
+.main-head,
+.main-nav,
+.content,
+.side,
+.ad,
+.main-footer {
+    background-color: rgb(72, 255, 0);
+    border: 2px solid darkorange;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0.5em;
+}
+
+@media screen and (max-width: 600px) {
+    /* .wrapper {
+       
+        grid-template-columns: 45% 45%;
+        column-gap: 10%;
+    } */
+    .main-head {
+        grid-column: 1 / 4;
+      
+    }
+    .main-nav {
+       grid-column: 1 /4;
+    }
+    .nav-items {
+        justify-items:center;
+    }
+    .content {
+        grid-column: 1 /4;
+    }
+    .side {
+        grid-column: 1 /4;
+    }
+    .ad {
+        grid-column: 1 /4;
+    }
+    .main-footer {
+        grid-column: 1 /4;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /* .wrapper {
+        display:grid;
+        grid-template-columns: 45% 45%;
+        column-gap: 10%;
+    } */
+    .main-head {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+    .main-nav {
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    .nav-items {
+        
+        justify-items:center;
+    }
+    .content {
+        grid-column: 2 / 4;
+        grid-row: 3;
+    }
+    .side {
+        grid-column: 1 / 2;
+        grid-row: 3;
+    }
+    .ad {
+       
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .main-footer {
+    
+        grid-column: 2 / 4;
+        grid-row: 4;
+    }
+}
+
+
+
+
+@media (min-width: 900px) {
+    /* .wrapper {
+    
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        column-gap: 10%;
+        row-gap: 4px;
+    } */
+    .main-head {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+    .main-nav {
+        grid-column:1 / 2;
+        grid-row: 2 / span 2;
+    }
+    .nav-items {
+        justify-items: start;
+    }
+    .content {
+       grid-column: 2 / 3;
+       grid-row: 2 / span 2;
+    }
+    .side {
+        grid-column: 3 / 4;
+        grid-row: 2;
+    }
+    .ad {
+        grid-column: 3/4;
+        grid-row: 3;
+    }
+    .main-footer {
+        grid-column: 1/4;
+        grid-row: 5;
+    }
+}
